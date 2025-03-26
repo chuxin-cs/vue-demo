@@ -14,9 +14,9 @@
     <!--项目描述-->
     <groupId>com.chuxin</groupId>
     <artifactId>spring-admin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>spring-admin</name>
-    <description>spring-admin</description>
+    <description>基于 Java 17 + SpringBoot 3 + Spring Security 构建的权限管理系统</description>
 
     <!--定义项目的依赖版本-->
     <properties>
@@ -31,17 +31,23 @@
     <!--项目依赖-->
     <dependencies>
         <!--============================== spring boot 生态 ==============================-->
-        <!--spring boot-->
+        <!--springboot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--spring boot test-->
+        <!--springboot test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--springboot生态下的redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!--============================== 数据库 ==============================-->
         <!-- 1、数据库 mysql 驱动 -->
         <dependency>
