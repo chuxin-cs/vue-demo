@@ -14,6 +14,34 @@ spring:
     username: root
     # 密码
     password: 123456
+  data:
+    redis:
+      database: 0
+      host: 119.91.239.178
+      password: chuxin_redis_123456
+      port: 6379
+      timeout: 10s
+      lettuce:
+        pool:
+          # 连接池最大连接数 默认8 ，负数表示没有限制
+          max-active: 8
+          # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+          max-wait: -1
+          # 连接池中的最大空闲连接 默认8
+          max-idle: 8
+          # 连接池中的最小空闲连接 默认0
+          min-idle: 0
+  cache:
+    enabled: false
+    # 缓存类型 redis、none(不使用缓存)
+    type: redis
+    # 缓存时间(单位：ms)
+    redis:
+      time-to-live: 3600000
+      # 缓存null值，防止缓存穿透
+      cache-null-values: true
+    caffeine:
+      spec: initialCapacity=50,maximumSize=1000,expireAfterWrite=600s
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
@@ -32,3 +60,32 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 验证码配置
+captcha:
+  # 验证码类型 circle-圆圈干扰验证码|gif-Gif验证码|line-干扰线验证码|shear-扭曲干扰验证码
+  type: circle
+  # 验证码宽度
+  width: 120
+  # 验证码高度
+  height: 40
+  # 验证码干扰元素个数
+  interfere-count: 2
+  # 文本透明度(0.0-1.0)
+  text-alpha: 0.8
+  # 验证码字符配置
+  code:
+    # 验证码字符类型 math-算术|random-随机字符
+    type: math
+    # 验证码字符长度，type=算术时，表示运算位数(1:个位数运算 2:十位数运算)；type=随机字符时，表示字符个数
+    length: 1
+  # 验证码字体
+  font:
+    # 字体名称 Dialog|DialogInput|Monospaced|Serif|SansSerif
+    name: SansSerif
+    # 字体样式 0-普通|1-粗体|2-斜体
+    weight: 1
+    # 字体大小
+    size: 24
+  # 验证码有效期(秒)
+  expire-seconds: 120
