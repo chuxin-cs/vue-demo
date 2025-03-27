@@ -11,4 +11,9 @@ public interface ConfigService extends IService<Config> {
      */
     Object getSystemConfig(String key);
 
+    /**
+     * 刷新系统配置缓存
+     * @return 是否刷新成功
+     */
+    boolean refreshCache();
 }
