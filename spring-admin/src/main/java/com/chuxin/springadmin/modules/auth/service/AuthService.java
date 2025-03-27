@@ -1,6 +1,5 @@
 package com.chuxin.springadmin.modules.auth.service;
 
-import com.chuxin.springadmin.common.result.R;
 import com.chuxin.springadmin.modules.auth.model.CaptchaInfo;
 
 public interface AuthService {
@@ -9,4 +8,6 @@ public interface AuthService {
      * @return 验证码
      */
     CaptchaInfo getCaptcha();
+
+    String login();
 }

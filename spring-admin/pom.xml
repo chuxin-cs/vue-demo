@@ -25,6 +25,9 @@
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <knife4j.version>4.4.0</knife4j.version>
         <hutool.version>5.8.34</hutool.version>
+
+        <!-- IP 地区转换 -->
+        <ip2region.version>2.7.0</ip2region.version>
     </properties>
 
 
@@ -46,6 +49,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--springboot生态相爱的 Spring Security 用户鉴权-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!--============================== 数据库 ==============================-->
@@ -83,6 +91,11 @@
         </dependency>
 
         <!--============================== 其他 ==============================-->
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+            <version>${ip2region.version}</version>
+        </dependency>
     </dependencies>
 
     <!--打包构建-->

@@ -87,4 +87,9 @@ public class AuthServiceImpl implements AuthService {
         // 返回
         return CaptchaInfo.builder().captchaKey(captchaKey).captchaBase64(imageBase64Data).build();
     }
+
+    @Override
+    public String login() {
+        return "登录成功";
+    }
 }

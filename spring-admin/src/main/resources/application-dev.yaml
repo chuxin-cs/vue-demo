@@ -61,6 +61,50 @@ mybatis-plus:
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: '系统管理'
+      paths-to-match: '/**'
+      packages-to-scan:
+        - com.chuxin.springadmin.controller
+        - com.chuxin.springadmin.modules.auth.controller
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# 安全配置
+security:
+  session:
+    # 会话方式，支持 jwt、redis-token
+    type: jwt
+  jwt:
+    # JWT 秘钥
+    key: SecretKey012345678901234567890123456789012345678901234567890123456789
+    # 访问令牌 有效期(单位：秒)，默认 1 小时
+    access-token-time-to-live: 3600
+    # 刷新令牌有效期(单位：秒)，默认 7 天
+    refresh-token-time-to-live: 604800
+  # 无需认证的请求路径
+  ignore-urls:
+    - /api/v1/auth/login/**       # 登录接口(账号密码登录、手机验证码登录和微信登录)
+    - /api/v1/auth/captcha        # 验证码获取接口
+    - /api/v1/auth/refresh-token  # 刷新令牌接口
+    - /ws/**                      # WebSocket接口
+  # 不走 Spring Security 过滤器链的请求路径(一般是静态资源)
+  unsecured-urls:
+    - ${springdoc.swagger-ui.path}
+    - /doc.html
+    - /swagger-ui/**
+    - /v3/api-docs/**
+    - /webjars/**
+
 # 验证码配置
 captcha:
   # 验证码类型 circle-圆圈干扰验证码|gif-Gif验证码|line-干扰线验证码|shear-扭曲干扰验证码

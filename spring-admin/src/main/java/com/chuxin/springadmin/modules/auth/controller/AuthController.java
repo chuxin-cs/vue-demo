@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +27,10 @@ public class AuthController {
         return R.success(captcha);
     }
 
-
+    @Operation(summary = "用户登录")
+    @PostMapping("/login")
+    public R<String> login() {
+        authService.login();
+        return R.success("登录成功");
+    }
 }
