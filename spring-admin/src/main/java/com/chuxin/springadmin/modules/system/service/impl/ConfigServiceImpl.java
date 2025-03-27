@@ -32,7 +32,6 @@ public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, Config> impleme
 
     /**
      * 刷新系统配置缓存
-     *
      * @return 是否刷新成功
      */
     @Override
@@ -49,7 +48,6 @@ public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, Config> impleme
 
     /**
      * 获取系统配置
-     *
      * @param key 配置键
      * @return 配置值
      */
