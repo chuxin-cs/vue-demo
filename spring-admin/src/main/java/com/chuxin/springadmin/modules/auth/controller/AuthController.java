@@ -1,16 +1,16 @@
 package com.chuxin.springadmin.modules.auth.controller;
 
 import com.chuxin.springadmin.common.result.R;
+import com.chuxin.springadmin.common.security.model.AuthenticationToken;
 import com.chuxin.springadmin.modules.auth.model.CaptchaInfo;
 import com.chuxin.springadmin.modules.auth.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "01.认证中心")
 @RestController
@@ -27,10 +27,13 @@ public class AuthController {
         return R.success(captcha);
     }
 
-    @Operation(summary = "用户登录")
+    @Operation(summary = "账号密码登录")
     @PostMapping("/login")
-    public R<String> login() {
-        authService.login();
-        return R.success("登录成功");
+    public R<AuthenticationToken> login(
+            @Parameter(description = "用户名", example = "admin") @RequestParam String username,
+            @Parameter(description = "密码", example = "1234567") @RequestParam String password
+    ) {
+        AuthenticationToken authenticationToken = authService.login(username,password);
+        return R.success(authenticationToken);
     }
 }

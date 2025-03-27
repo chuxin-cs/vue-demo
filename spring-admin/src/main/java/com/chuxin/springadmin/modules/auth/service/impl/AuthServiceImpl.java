@@ -5,6 +5,8 @@ import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.core.util.IdUtil;
 import com.chuxin.springadmin.common.config.property.CaptchaProperties;
 import com.chuxin.springadmin.common.constant.SecurityConstants;
+import com.chuxin.springadmin.common.security.manager.TokenManager;
+import com.chuxin.springadmin.common.security.model.AuthenticationToken;
 import com.chuxin.springadmin.modules.auth.enums.CaptchaTypeEnum;
 import com.chuxin.springadmin.modules.auth.model.CaptchaInfo;
 import com.chuxin.springadmin.modules.auth.service.AuthService;
@@ -12,6 +14,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import cn.hutool.captcha.generator.CodeGenerator;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
@@ -21,11 +27,12 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthServiceImpl implements AuthService {
+    private final AuthenticationManager authenticationManager;
+    private final TokenManager tokenManager;
 
     private final Font captchaFont;
     private final CodeGenerator codeGenerator;
     private final CaptchaProperties captchaProperties;
-
     private final RedisTemplate<String, Object> redisTemplate;
 
     /**
@@ -88,8 +95,25 @@ public class AuthServiceImpl implements AuthService {
         return CaptchaInfo.builder().captchaKey(captchaKey).captchaBase64(imageBase64Data).build();
     }
 
+    /**
+     * 用户名密码登录
+     *
+     * @param username 用户名
+     * @param password 密码
+     * @return 访问令牌
+     */
     @Override
-    public String login() {
-        return "登录成功";
+    public AuthenticationToken login(String username, String password) {
+        // 1. 创建用于密码认证的令牌（未认证）
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username.trim(), password);
+
+        // 2. 执行认证（认证中）
+        Authentication authentication = authenticationManager.authenticate(authenticationToken);
+
+        // 3. 认证成功后生成 JWT 令牌，并存入 Security 上下文，供登录日志 AOP 使用（已认证）
+        AuthenticationToken authenticationTokenResponse =
+                tokenManager.generateToken(authentication);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        return authenticationTokenResponse;
     }
 }
