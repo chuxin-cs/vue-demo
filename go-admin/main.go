@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"go-admin/core"
+	"go-admin/global"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	global.GVA_VP = core.Viper()
 }
