@@ -560,6 +560,7 @@ export const DEFAULT_USER = {
 	password: "demo1234",
 	role: ADMIN_ROLE,
 	permissions: ADMIN_ROLE.permission,
+	captchaCode: "",
 };
 export const TEST_USER = {
 	id: "efaa20ea-4dc5-47ee-a200-8a899be29494",
