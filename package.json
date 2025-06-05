@@ -16,27 +16,34 @@
   "author": "chuxin",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.25.0",
     "@qiaojun/tsconfig": "^1.2.5",
-    "vite": "^6.3.5",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
-    "typescript": "~5.8.3",
-    "vue-tsc": "^2.2.8",
-    "@eslint/js": "^9.25.0",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.8"
   },
   "dependencies": {
-    "vue": "^3.5.13",
+    "@ant-design/icons": "5.x",
+    "ant-design-vue": "4.x",
+    "antd": "^5.25.4",
     "axios": "^1.9.0",
     "dayjs": "^1.11.13",
     "nprogress": "^0.2.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "pinia": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^7.0.2",
+    "zustand": "^4.5.5",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   }
 }
