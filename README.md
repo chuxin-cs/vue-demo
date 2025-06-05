@@ -1,5 +1,5 @@
 # tocc-admin
->  Tocc Admin 是一款现代化的后台管理模板，基于 React 19、Vite、Qiankun、Ant Design 和 TypeScript 构建。它旨在帮助开发人员快速搭建功能强大的后台管理系统。
+>  基于 QianKun + Vite 整合 React + Vue 后台管理系统
 
 ## ✨ Features
 - 🌈 使用 React 19 hooks 进行构建。
