@@ -4,8 +4,7 @@
   "type": "module",
   "private": true,
   "description": "基于 QianKun + Vite 整合 React + Vue 后台管理系统",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "qiankun",
     "vite",
@@ -15,5 +14,13 @@
     "chuxin-admin"
   ],
   "author": "chuxin",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dayjs": "^1.11.13",
+    "nprogress": "^0.2.0"
+  }
 }
