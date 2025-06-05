@@ -20,9 +20,19 @@
     "vite": "^6.3.5",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.1"
+    "@vitejs/plugin-react": "^4.4.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vue-tsc": "^2.2.8",
+    "@eslint/js": "^9.25.0",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0"
   },
   "dependencies": {
+    "vue": "^3.5.13",
     "axios": "^1.9.0",
     "dayjs": "^1.11.13",
     "nprogress": "^0.2.0",
