@@ -1,0 +1,19 @@
+{
+  "name": "chuxin-admin",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "基于 QianKun + Vite 整合 React + Vue 后台管理系统",
+  "scripts": {
+  },
+  "keywords": [
+    "qiankun",
+    "vite",
+    "react",
+    "vue",
+    "admin",
+    "chuxin-admin"
+  ],
+  "author": "chuxin",
+  "license": "MIT"
+}
