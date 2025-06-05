@@ -1,8 +1,14 @@
-<script setup lang="ts">
+<script lang="ts" setup>
+import { App, ConfigProvider } from 'ant-design-vue';
+
 </script>
 
 <template>
   <div>
-    1111
+    <ConfigProvider>
+      <App>
+        <router-view></router-view>
+      </App>
+    </ConfigProvider>
   </div>
 </template>
