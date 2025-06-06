@@ -1,3 +1,4 @@
-import SvgIcon from "./svg-icon";
+import SvgIcon from "./SvgIcon";
+import Iconify from "./iconify-icon";
 
-export { SvgIcon };
+export { SvgIcon,Iconify };
