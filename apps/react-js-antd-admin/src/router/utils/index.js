@@ -33,3 +33,15 @@ export const menuFilter = (items) => {
     })
     .sort(ascend((item) => item.order || Number.POSITIVE_INFINITY));
 };
+
+/**
+ * return flatten routes
+ */
+export function flattenMenuRoutes(routes) {
+	return routes.reduce((prev, item) => {
+		const { meta, children } = item;
+		if (meta) prev.push(meta);
+		if (children) prev.push(...flattenMenuRoutes(children));
+		return prev;
+	}, []);
+}
