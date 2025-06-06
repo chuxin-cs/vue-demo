@@ -5,7 +5,7 @@ import { Navigate, createHashRouter } from 'react-router';
 import { usePermissionRoutes } from './hooks';
 
 // components
-import { PUBLIC_ROUTE, ERROR_ROUTE, NO_MATCHED_ROUTE } from './sys';
+import { PUBLIC_ROUTE, ERROR_ROUTE, NO_MATCHED_ROUTE } from './sys/index.js';
 import DashboardLayout from '@/layouts/dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -14,7 +14,6 @@ const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
 
 const Router = () => {
   const permissionRoutes = usePermissionRoutes();
-  console.log(permissionRoutes, '=permissionRoutes=');
   //
   const PROTECTED_ROUTE = {
     path: '/',
