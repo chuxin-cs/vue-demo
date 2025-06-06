@@ -25,6 +25,9 @@ const NavHorizontal = () => {
     console.log('click ', e);
   };
 
+  console.log(menuList,"menuList")
+  console.log(themeVars.colors.background.default,"themeVars.colors.background.default");
+
   return (
     <div className='w-screen' style={{ height: NAV_HORIZONTAL_HEIGHT }}>
       <Menu
