@@ -148,7 +148,7 @@ const NavVertical = (props) => {
           selectedKeys={selectedKeys}
           openKeys={openKeys}
           onOpenChange={handleOpenChange}
-          className='!border-none'
+          className='!border-none chuxin-menu'
           onClick={onClick}
         />
       </div>
