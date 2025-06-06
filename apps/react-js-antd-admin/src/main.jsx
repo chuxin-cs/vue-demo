@@ -1,10 +1,14 @@
-import { Suspense } from "react"
+import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
 
-const root = createRoot(document.getElementById('root'))
+// components
+import App from './App.jsx';
+import ProgressBar from './components/ProgressBar';
+
+const root = createRoot(document.getElementById('root'));
 root.render(
   <Suspense>
+    <ProgressBar />
     <App />
   </Suspense>
 );
