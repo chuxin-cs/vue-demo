@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react';
 
 // components
 import SimpleLayout from "@/layouts/simple";
+import { CircleLoading } from '@/components/loading';
 import ProtectedRoute from "../components/ProtectedRoute";
 const Page403 = lazy(() => import('@/pages/sys/error/Page403'));
 const Page404 = lazy(() => import('@/pages/sys/error/Page404'));
@@ -13,7 +14,7 @@ export const ERROR_ROUTE = {
   element: (
     <ProtectedRoute>
       <SimpleLayout>
-        <Suspense fallback={<div>loading....</div>}>
+        <Suspense fallback={<CircleLoading />}>
           <Outlet />
         </Suspense>
       </SimpleLayout>

@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Navigate, Outlet } from "react-router";
 
+// components
 import { SvgIcon } from "@/components/icon";
-
-
+import { CircleLoading } from "@/components/loading";
 const HomePage = lazy(() => import("@/pages/dashboard/workbench"));
 const Analysis = lazy(() => import("@/pages/dashboard/analysis"));
 
@@ -11,7 +11,7 @@ const dashboard = {
 	order: 1,
 	path: "dashboard",
 	element: (
-		<Suspense fallback={<div>loading...</div>}>
+		<Suspense fallback={<CircleLoading />}>
 			<Outlet />
 		</Suspense>
 	),

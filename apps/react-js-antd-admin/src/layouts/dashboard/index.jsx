@@ -3,11 +3,12 @@ import { Suspense } from 'react';
 
 // components
 import Main from './Main';
+import { CircleLoading } from '@/components/loading';
 
 const DashboardLayout = () => {
   return (
     <Layout>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<CircleLoading />}>
         <Layout>
           <Main />
         </Layout>

@@ -1,4 +1,4 @@
-// 为确保只导出组件，手动导入并导出每个组件
+// 使用 export * 的时候 有的时候都不知道从那个文件里面导出的
 
 import { PUBLIC_ROUTE } from './public';
 export { PUBLIC_ROUTE };

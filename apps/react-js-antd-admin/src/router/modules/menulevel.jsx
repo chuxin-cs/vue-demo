@@ -4,6 +4,7 @@ import { Navigate, Outlet } from 'react-router';
 // components
 import { Typography } from 'antd';
 import { SvgIcon } from '@/components/icon';
+import { CircleLoading } from '@/components/loading';
 
 function MenuLevel({ title }) {
   return <Typography.Title>Menu Level: {title}</Typography.Title>;
@@ -13,7 +14,7 @@ const MenulevelConfig = {
   order: 5,
   path: 'menu_level',
   element: (
-    <Suspense fallback={<div>loading...</div>}>
+    <Suspense fallback={<CircleLoading />}>
       <Outlet />
     </Suspense>
   ),
