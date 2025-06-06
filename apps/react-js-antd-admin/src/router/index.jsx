@@ -7,7 +7,7 @@ import { usePermissionRoutes } from './hooks';
 // components
 import { PUBLIC_ROUTE, ERROR_ROUTE, NO_MATCHED_ROUTE } from './sys';
 import DashboardLayout from '@/layouts/dashboard';
-import ProtectedRoute from '@/router/components/ProtectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 
 // var
 const { VITE_APP_HOMEPAGE: HOMEPAGE } = import.meta.env;
