@@ -9,7 +9,7 @@ function MenuLevel({ title }) {
   return <Typography.Title>Menu Level: {title}</Typography.Title>;
 }
 
-const menulevel = {
+const MenulevelConfig = {
   order: 5,
   path: 'menu_level',
   element: (
@@ -86,4 +86,4 @@ const menulevel = {
   ],
 };
 
-export default menulevel;
+export default MenulevelConfig;
