@@ -5,7 +5,7 @@ import { Navigate, createHashRouter } from 'react-router';
 import { usePermissionRoutes } from './hooks';
 
 // components
-import { PUBLIC_ROUTE } from './sys';
+import { PUBLIC_ROUTE, ERROR_ROUTE, NO_MATCHED_ROUTE } from './sys';
 import DashboardLayout from '@/layouts/dashboard';
 import ProtectedRoute from '@/router/components/ProtectedRoute';
 
@@ -30,7 +30,12 @@ const Router = () => {
       ...permissionRoutes,
     ],
   };
-  const routes = [PUBLIC_ROUTE, PROTECTED_ROUTE];
+  const routes = [
+    PUBLIC_ROUTE, // 公共路由
+    PROTECTED_ROUTE, // 受保护的路由(业务路由)
+    ERROR_ROUTE, // 错误路由
+    NO_MATCHED_ROUTE, // 上面都没有匹配到的路由，放最后
+  ];
   const router = createHashRouter(routes);
   return <RouterProvider router={router} />;
 };
