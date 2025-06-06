@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 // components
-import { SvgIcon } from '@/components';
+import { SvgIcon } from '@/components/icon';
 // store
 import { useSettings } from '@/store/settingStore';
 // outher
