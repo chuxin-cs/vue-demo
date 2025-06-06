@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
+// plugins
+import 'virtual:svg-icons-register'
 // components
 import App from './App.jsx';
 import ProgressBar from './components/ProgressBar';

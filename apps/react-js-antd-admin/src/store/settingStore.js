@@ -11,7 +11,7 @@ const useSettingStore = create()(
 				themeStretch: false,
 				breadCrumb: true,
 				accordion: false,
-				multiTab: true,
+				multiTab: false,
 				darkSidebar: false,
 				fontFamily: "Open Sans Variable",
 				fontSize: 14,
