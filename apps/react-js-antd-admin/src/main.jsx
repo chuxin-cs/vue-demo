@@ -9,6 +9,7 @@ import ProgressBar from './components/ProgressBar';
 import './locales/i18n';
 // css
 import './styles/index.css';
+import "./theme/theme.css";
 
 const root = createRoot(document.getElementById('root'));
 root.render(
