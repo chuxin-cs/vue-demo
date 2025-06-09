@@ -1,7 +1,10 @@
 # vue-demo
-> 🍉🍉🍉 用来学习并实战 React 的项目~
+> 🍉🍉🍉 用来学习并实战 Vue 的项目~
 
-
+## ✨ 项目列表
+> 🍉🍉🍉 持续更新中...
+### 1、基础
+- [demo-xxxxxxxx](https://github.com/chuxin-cs/vue-demo/tree/master/demo-xxxxxxxxxxxxx) - xxxxxxxxxxxxxx
 
 ## Git 贡献提交规范
 
