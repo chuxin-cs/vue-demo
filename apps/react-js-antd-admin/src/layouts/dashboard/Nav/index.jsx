@@ -5,7 +5,6 @@ import { useSettings } from '@/store/settingStore';
 import NavVertical from './NavVertical';
 import NavHorizontal from './NavHorizontal';
 
-
 const Nav = () => {
   const { themeLayout } = useSettings();
   const isPc = true;

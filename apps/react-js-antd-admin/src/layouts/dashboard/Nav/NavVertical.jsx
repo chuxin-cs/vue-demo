@@ -29,7 +29,7 @@ const NavVertical = (props) => {
   const settings = useSettings();
   const { themeLayout, themeMode, darkSidebar } = settings;
   const { setSettings } = useSettingActions();
-  
+
   // sider
   const collapsed = useMemo(() => themeLayout === 'mini', [themeLayout]);
   const sidebarTheme = useMemo(() => {

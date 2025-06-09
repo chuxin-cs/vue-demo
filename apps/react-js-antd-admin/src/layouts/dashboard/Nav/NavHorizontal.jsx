@@ -7,7 +7,7 @@ import { usePermissionRoutes, useRouteToMenuFn } from '@/router/hooks';
 // outher
 import { menuFilter } from '@/router/utils';
 import { NAV_HORIZONTAL_HEIGHT } from '../config';
-import { themeVars } from "@/theme/theme.css";
+import { themeVars } from '@/theme/theme.css';
 
 const NavHorizontal = () => {
   // menu list
@@ -24,9 +24,6 @@ const NavHorizontal = () => {
   const onClick = (e) => {
     console.log('click ', e);
   };
-
-  console.log(menuList,"menuList")
-  console.log(themeVars.colors.background.default,"themeVars.colors.background.default");
 
   return (
     <div className='w-screen' style={{ height: NAV_HORIZONTAL_HEIGHT }}>

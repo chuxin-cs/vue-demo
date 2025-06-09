@@ -1,7 +1,5 @@
 const MultiTabs = () => {
-  return (
-    <>tabs</>
-  )
-}
+  return <>tabs</>;
+};
 
 export default MultiTabs;

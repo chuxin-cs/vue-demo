@@ -6,7 +6,6 @@ import zh_CN from "./lang/zh_CN";
 import { getStringItem } from "@/utils/storage";
 
 const defaultLng = getStringItem('i18nextLng') || ('zh_CN');
-console.log(defaultLng,"defaultLng")
 
 i18n
   .use(LanguageDetector)

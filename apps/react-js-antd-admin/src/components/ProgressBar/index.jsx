@@ -2,7 +2,6 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { useEffect } from 'react';
 
-
 // 配置 NProgress
 NProgress.configure({
   showSpinner: false,

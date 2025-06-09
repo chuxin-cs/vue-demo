@@ -1,30 +1,32 @@
-import { createContext, useMemo, useState } from "react";
+import { createContext, useMemo, useState } from 'react';
 
 const MultiTabsContext = createContext({
   tabs: [],
-  activeTabRoutePath: "",
-  setTabs: () => { },
-  closeTab: () => { },
-  closeOthersTab: () => { },
-  closeAll: () => { },
-  closeLeft: () => { },
-  closeRight: () => { },
-  refreshTab: () => { },
-})
+  activeTabRoutePath: '',
+  setTabs: () => {},
+  closeTab: () => {},
+  closeOthersTab: () => {},
+  closeAll: () => {},
+  closeLeft: () => {},
+  closeRight: () => {},
+  refreshTab: () => {},
+});
 
 const MultiTabsProvider = ({ children }) => {
   const [tabs, setTabs] = useState([]);
 
-
-
   const contextValue = useMemo(() => {
-    return ({
+    return {
       tabs,
       setTabs,
-    })
-  }, [tabs])
+    };
+  }, [tabs]);
 
-  return <MultiTabsContext.Provider value={contextValue}>{children}</MultiTabsContext.Provider>
-}
+  return (
+    <MultiTabsContext.Provider value={contextValue}>
+      {children}
+    </MultiTabsContext.Provider>
+  );
+};
 
 export default MultiTabsProvider;
