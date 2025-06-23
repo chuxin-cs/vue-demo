@@ -3,6 +3,7 @@ import { debounce } from 'lodash-es';
 
 /**
  * 自定义指令对象，用于实现防抖功能
+ * <button v-debounce:2000.leading="submit">提交</button>
  */
 export default {
   /**
