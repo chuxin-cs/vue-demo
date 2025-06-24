@@ -4,7 +4,7 @@ import zh_CN from "./lang/zh_CN";
 
 // 创建一个 i18n 实例，用于处理多语言支持
 const i18n = createI18n({
-  // Vue 3 必须设置为 false，以使用组合式 API 模式
+  // Vue 3 必须设置为 false，以使用组合式 API 模式 https://vue-i18n.intlify.dev/api/general.html#legacy
   legacy: false, 
   // 设置当前使用的语言为英语
   locale: "en",
