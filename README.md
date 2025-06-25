@@ -20,6 +20,7 @@
 - [demo-directive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-directive) - 自定义指令
 - [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - layouts 布局组件
 - [demo-keep-alive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-keep-alive) - Vue keepalive 组件缓存
+- [demo-driver](https://github.com/chuxin-cs/vue-demo/tree/master/demo-driver) - driver.js 用户引导
 #### 源码系列
 - [demo-hooks](https://github.com/chuxin-cs/vue-demo/tree/master/demo-hooks) - 学习 ahooks 源码,并且基于 vue 实现，且学习 vueuse 源码
 - [demo-element-plus](https://github.com/chuxin-cs/vue-demo/tree/master/demo-element-plus) - 学习 Element Plus 源码,并且基于 vue 实现
