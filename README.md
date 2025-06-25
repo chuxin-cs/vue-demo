@@ -15,6 +15,7 @@
 - [demo-vue-router](https://github.com/chuxin-cs/vue-demo/tree/master/demo-vue-router) - 学习 vue-router
 #### 项目实践
 - [demo-locales](https://github.com/chuxin-cs/vue-demo/tree/master/demo-locales) - 基于 vue-i18n 实现的国际化
+- [demo-tabs](https://github.com/chuxin-cs/vue-demo/tree/master/demo-tabs) - 基于 vue-tabs 实现的标签页
 - [demo-menu](https://github.com/chuxin-cs/vue-demo/tree/master/demo-menu) - 基于 vue-router 实现的菜单组件
 - [demo-directive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-directive) - 自定义指令
 - [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - 基于 vue-router 实现的布局组件
