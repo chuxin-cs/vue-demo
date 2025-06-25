@@ -21,6 +21,7 @@
 - [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - 基于 vue-router 实现的布局组件
 #### 源码系列
 - [demo-hooks](https://github.com/chuxin-cs/vue-demo/tree/master/demo-hooks) - 学习 ahooks 源码,并且基于 vue 实现，且学习 vueuse 源码
+- [demo-element-plus](https://github.com/chuxin-cs/vue-demo/tree/master/demo-element-plus) - 学习 Element Plus 源码,并且基于 vue 实现
 
 ## Git 贡献提交规范
 
