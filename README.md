@@ -16,9 +16,10 @@
 #### 项目实践
 - [demo-locales](https://github.com/chuxin-cs/vue-demo/tree/master/demo-locales) - 基于 vue-i18n 实现的国际化
 - [demo-tabs](https://github.com/chuxin-cs/vue-demo/tree/master/demo-tabs) - 基于 vue-tabs 实现的标签页
-- [demo-menu](https://github.com/chuxin-cs/vue-demo/tree/master/demo-menu) - 基于 vue-router 实现的菜单组件
+- [demo-menu](https://github.com/chuxin-cs/vue-demo/tree/master/demo-menu) - 基于 element-plus 实现的菜单组件
 - [demo-directive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-directive) - 自定义指令
-- [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - 基于 vue-router 实现的布局组件
+- [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - layouts 布局组件
+- [demo-keep-alive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-keep-alive) - Vue keepalive 组件缓存
 #### 源码系列
 - [demo-hooks](https://github.com/chuxin-cs/vue-demo/tree/master/demo-hooks) - 学习 ahooks 源码,并且基于 vue 实现，且学习 vueuse 源码
 - [demo-element-plus](https://github.com/chuxin-cs/vue-demo/tree/master/demo-element-plus) - 学习 Element Plus 源码,并且基于 vue 实现
