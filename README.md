@@ -28,6 +28,7 @@
 - [demo-layouts](https://github.com/chuxin-cs/vue-demo/tree/master/demo-layouts) - layouts 布局组件
 - [demo-keep-alive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-keep-alive) - Vue keepalive 组件缓存
 - [demo-driver](https://github.com/chuxin-cs/vue-demo/tree/master/demo-driver) - driver.js 用户引导
+- [demo-components](https://github.com/chuxin-cs/vue-demo/tree/master/demo-components) - 业务组件沉淀
 
 #### 源码系列
 
