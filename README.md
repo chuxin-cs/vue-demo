@@ -30,6 +30,7 @@
 - [demo-keep-alive](https://github.com/chuxin-cs/vue-demo/tree/master/demo-keep-alive) - Vue keepalive 组件缓存
 - [demo-driver](https://github.com/chuxin-cs/vue-demo/tree/master/demo-driver) - driver.js 用户引导
 - [demo-tailwind](https://github.com/chuxin-cs/vue-demo/tree/master/demo-tailwind) - 基于 tailwindcss 实践原子css
+- [demo-vite-plugins](https://github.com/chuxin-cs/vue-demo/tree/master/demo-vite-plugins) - 学习vite市面上的一些vite插件，并且实现这些插件的核心功能
 
 #### 源码系列
 
