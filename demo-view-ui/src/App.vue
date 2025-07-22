@@ -7,8 +7,8 @@ import { columns16, data12 } from "./data.js"
 export default {
   data() {
     return {
-      columns16: columns16,
-      data12: data12
+      columns16: Object.freeze(columns16),
+      data12: Object.freeze(data12)
     }
   }
 }
