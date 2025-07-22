@@ -26,9 +26,7 @@ export const data12 = [
     name: 'Jim Green',
     age: 24,
     address: 'London No. 1 Lake Park',
-    children: [
-      ...generateMockData(100),
-      {
+    children: [{
         id: '10102',
         name: 'Jon Snow',
         age: 26,
@@ -41,7 +39,8 @@ export const data12 = [
             address: 'New York No. 1 Lake Park'
           }
         ]
-      }
+      },
+      ...generateMockData(50),
     ]
   },
   {
